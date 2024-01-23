@@ -37,3 +37,16 @@ const team = [
 for (const member of team) {
     console.log(`Nome: ${member.name}, Ruolo: ${member.role}, Foto: ${member.image}`);
 }
+
+// modifico il DOM per stampare le info a schermo
+
+const cardContainer = document.getElementById('card-container')
+
+for (const member of team) {
+    // creo un paragrafo dove inserire le info
+    const info = document.createElement('p')
+    info.innerHTML = `Nome: ${member.name}, Ruolo: ${member.role}, Foto: ${member.image}`
+
+    // aggiungo le info al container
+    cardContainer.appendChild(info)
+}
